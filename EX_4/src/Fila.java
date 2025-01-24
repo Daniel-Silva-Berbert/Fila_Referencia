@@ -8,6 +8,7 @@ public class Fila <T extends Object>{
         if(tamanho == 0){
             t1.elemento = elemento;
             this.cabeca = t1;
+            this.cauda = t1;
         }else{
             
             t1.elemento = elemento;
@@ -25,5 +26,9 @@ public class Fila <T extends Object>{
         cabeca = (FilaBase) cabeca.prox;
         --tamanho;
         return el;
+    }
+
+    public int getTamanho(){
+        return this.tamanho;
     }
 }
